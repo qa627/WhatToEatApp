@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.food', # 新增 (注意路徑要跟 apps.py 中的 name 一致)
-
 ]
 
 MIDDLEWARE = [
@@ -104,9 +102,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hant'   # 繁體中文
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Taipei'   # 台灣時區
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
