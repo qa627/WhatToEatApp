@@ -1,0 +1,15 @@
+<!-- apps/food/templates/food/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>食材首頁</title>
+</head>
+<body>
+    <h1>這是食材首頁</h1>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient.name }}（{{ ingredient.quantity }} {{ ingredient.unit }}）</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

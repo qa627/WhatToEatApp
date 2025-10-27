@@ -1,0 +1,17 @@
+<!-- apps/food/templates/food/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>食材首頁</title>
+</head>
+<body>
+    <h1>🍽 食材首頁</h1>
+    <ul>
+        {% for item in ingredients %}
+            <li>{{ item.name }}（數量：{{ item.quantity }}）</li>
+        {% empty %}
+            <li>目前沒有任何食材。</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
