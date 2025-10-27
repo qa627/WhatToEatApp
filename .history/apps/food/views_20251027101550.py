@@ -1,3 +1,4 @@
+# apps/food/views.py
 from django.views import View
 from django.shortcuts import render, get_object_or_404
 from .models import Ingredient, Category
