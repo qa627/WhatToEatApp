@@ -5,6 +5,9 @@
     <title>食材首頁</title>
 </head>
 <body>
+
+    <h1>食材列表</h1>
+
     <form method="get">
         <input type="text" name="q" placeholder="搜尋食材..." value="{{ request.GET.q }}">
         <button type="submit">搜尋</button>
@@ -12,9 +15,7 @@
 
     <ul>
     {% for ingredient in ingredients %}
-        <li><a href="{% url 'food:ingredient_detail' ingredient.id %}">
-        {{ ingredient.name }} (數量: {{ ingredient.quantity }})
-      </a></li>
+        <li>{{ ingredient.name }} ({{ ingredient.quantity }})</li>
     {% empty %}
         <li>沒有找到食材</li>
     {% endfor %}

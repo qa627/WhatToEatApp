@@ -12,9 +12,7 @@
 
     <ul>
     {% for ingredient in ingredients %}
-        <li><a href="{% url 'food:ingredient_detail' ingredient.id %}">
-        {{ ingredient.name }} (數量: {{ ingredient.quantity }})
-      </a></li>
+        <li>{{ ingredient.name }} ({{ ingredient.quantity }})</li>
     {% empty %}
         <li>沒有找到食材</li>
     {% endfor %}

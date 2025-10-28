@@ -1,0 +1,19 @@
+<h1>{{ ingredient.name }}</h1>
+<p>數量: {{ ingredient.quantity }}</p>
+<p>分類: {% if ingredient.category %}
+    {{ ingredient.category.name }}
+    {% else %}
+    無
+{% endif %}
+</p>
+
+{% if related %}
+<h2>同分類相關食材</h2>
+<ul>
+  {% for item in related %}
+    <li>{{ item.name }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<a href="{% url 'food:ingredient_list' %}">回食材列表</a>

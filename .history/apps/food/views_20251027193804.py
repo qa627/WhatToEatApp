@@ -10,7 +10,6 @@ class IndexView(View):
         # 可透過查詢參數排序
         order_by = request.GET.get('order', 'id')
         ingredients = ingredients.order_by(order_by)
-        
         # 搜尋
         query = request.GET.get('q', '')
         if query:
